@@ -1,0 +1,14 @@
+spring.application.name :  ${vcap.application.name:hello-world-client}
+
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+
+info:
+  app:
+    name: hello-world-client
+    description: My Hello World Client
+    version: 0.0.1
+
+helloServiceUri: http://hello-world-service
